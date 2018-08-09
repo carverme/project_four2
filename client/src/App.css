@@ -1,0 +1,79 @@
+body {
+  background: #5298d1;
+}
+/* ADDED */
+.my-card {
+  height: 350px;
+  width: 350px;
+}
+
+.my-card__media {
+  background-image: url("./Calendar.png");
+  height: 825px;
+  width: 825px;
+}
+
+#button-login {
+  width: 100%;
+}
+
+#tracker-box {
+  background: #5298d1;
+  height: 850px;
+  width: 850px;
+  position: relative;
+  align-items: center;
+}
+
+/* ADDED */
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #102c82;
+  background-image: url("https://images.unsplash.com/photo-1506485338023-6ce5f36692df?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=361443dfa9b671620076cd18e12d060d&auto=format&fit=crop&w=800&q=60");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+  font-family: 'Monoton';
+  color: white;
+  font-size: 5em;
+  margin-top: 0em;
+  margin-bottom: 0em;
+  font-weight: lighter;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+#box1 {
+  height: 5em;
+  background-color: #e9e2cb;
+  color: white;
+}
+
+.grid {
+  background: #e9e2cb;
+  height: 40em;
+  padding-left: 14em;
+  padding-right: 14em;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
