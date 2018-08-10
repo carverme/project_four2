@@ -1,31 +1,33 @@
 require('dotenv').config();
 var passport = require('passport');
 var GitHubStrategy = require('passport-github').Strategy;
-var db = require("../models")
+var db = require("../models");
 
 passport.use(new GitHubStrategy({
     clientID: process.env.GITHUB_CLIENT_ID,
     clientSecret: process.env.GITHUB_CLIENT_SECRET,
     callbackURL: "http://localhost:3001/auth/github/callback"
-  },
-  (accessToken, refreshToken, profile, cb) => {
-    console.log('this is the access token:', accessToken);
+  }, (accessToken, refreshToken, profile, cb) => {
+    // console.log('this is the access token:', accessToken);
     // console.log('refresh token', refreshToken);
-    console.log('see this profile:', profile);
-    User.findOrCreate({ githubid: profile.id }, function (err, user) {
-      return cb(err, user);
-    });
-    User.findOrCreate({ accessToken: accessToken}, function(err, user) {
-      return cb(err, user);
-    });
-  }));
+    // console.log('see this profile:', profile);
+    db.user.findOrCreate({
+      where: {githubid: profile.id },
+      defaults: {accesstoken: accessToken}
+    }).spread(function(user, created) {
+      // console.log(user, created);
+      return cb(null, {githubid: profile.id, accesstoken: accessToken})
+    })
+  }
+));
+
 
 passport.serializeUser(function(user, cb) {
   cb(null, user);
 });
 
 passport.deserializeUser(function(user, cb) {
-  cb(null, obj);
+  cb(null, user);
 });
 
-module.exports = passport;
+module.exports = passport

@@ -37,14 +37,17 @@ app.get('/auth/github',
 app.get('/auth/github/callback',
   passport.authenticate('github', { failureRedirect: '/login' }),
   function(req, res) {
+    console.log("################## in the successful login callback ##################")
     // Successful authentication, redirect home.
-    res.redirect('/');
+    console.log("Now lets see what is attached to the req object");
+    console.log(req.user);
+    res.send('WHERE AM I?????????');
   });
 
   app.get('/profile',
-  require('connect-ensure-login').ensureLoggedIn(),
-  function(req, res) {
-    res.render('profile', { user: req.user });
+    require('connect-ensure-login').ensureLoggedIn(),
+    function(req, res) {
+      res.render('profile', { user: req.user });
   });
 
   app.listen(3001, () => {
