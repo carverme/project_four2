@@ -232,3 +232,8 @@ html {
   font-size: 45px;
   text-align: left;
 }
+
+#sign-up-button {
+  margin-top: 3em;
+  border: solid gray;
+}

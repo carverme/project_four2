@@ -6,7 +6,6 @@ class Home extends Component {
   render() {
     return (
       <div className="Home">
-
         <div class="login-container">
           <section class="login" id="login">
             <header>

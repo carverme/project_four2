@@ -8,6 +8,7 @@ import './App.css';
 import Project from './Project';
 import Goals from './Goals';
 import Profile from './Profile';
+import Login from './Login';
 import Home from './Home';
 import Navbar from './Navbar';
 import User from './User';
@@ -29,7 +30,8 @@ class App extends Component {
             <Route exact path="/" render={() => <Home /> } />
             <Route path="/goals" render={() => <Goals /> } />
             <Route path="/profile" render={() => <Profile /> } />
-            <Route path="/Project" render={() => <Project /> } />
+            <Route path="/project" render={() => <Project /> } />
+            <Route path="/login" render={() => <Login /> } />
           </div>
         </Router>
       </div>
