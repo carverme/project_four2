@@ -21,8 +21,10 @@ app.use(passport.session());
 
 app.get('/', (req, res) => {
   console.log('This is the user' + req.user)
+    // res.render('/')
+
     res.json({
-      status: "session cookie whatever"
+      githubid, accesstoken
     });
 });
 
@@ -48,6 +50,10 @@ app.get('/auth/github/callback',
     require('connect-ensure-login').ensureLoggedIn(),
     function(req, res) {
       res.render('profile', { user: req.user });
+  });
+
+  app.get('*', (req, res) => {
+    res.sendFile(__dirname + "/client/build/index.html");
   });
 
   app.listen(3001, () => {
