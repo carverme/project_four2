@@ -12,10 +12,12 @@ const Navbar = props => {
         <Toolbar>
           <Typography variant="title" color="inherit">
 
+            <div className="link-name">
               <Link to='/'>Home</Link>
-              <Link to='/goals'>Goals</Link>
+              <Link to='/goals'>Profile</Link>
               <Link to='/login'>Login</Link>
-              <Link to='/calendar'>Calendar</Link>
+              <Link to='/Project'>Project</Link>
+            </div>
 
           </Typography>
         </Toolbar>
