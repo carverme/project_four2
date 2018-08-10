@@ -1,18 +1,9 @@
+require('dotenv').config();
 const express = require('express');
-const app = express();
+const router = express.Router();
 const bodyParser = require('body-parser');
-
 const passport = require('../config/passportConfig.js');
-const session = require('express-session');
-
-app.use(require('morgan')('combined'));
-app.use(require('cookie-parser')());
-app.use(bodyParser.urlencoded({extended: true}));
-app.use(bodyParser.json());
-
-app.use(session({ secret: 'oauths are stupid', resave: true, saveUninitialized: true }));
-app.use(passport.initialize());
-app.use(passport.session());
+var db = require('../models');
 
 // app.get('/',
 //   function(req, res) {
@@ -53,4 +44,4 @@ router.get('/auth/github/callback',
   });
 
 
-  module.export = router;
+  module.exports = router;
