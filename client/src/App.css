@@ -13,8 +13,10 @@
   width: 100%;
 }
 
-.App {
+.App, .login-container {
   text-align: center;
+	justify-content: space-between;
+  align-content: center;
 }
 
 .App-header {
