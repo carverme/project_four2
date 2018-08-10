@@ -41,4 +41,3 @@ Goals.propTypes = {
 };
 
 export default withStyles(styles)(Goals);
-x

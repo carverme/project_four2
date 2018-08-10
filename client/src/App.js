@@ -11,7 +11,7 @@ import Home from './Home';
 import Navbar from './Navbar';
 import User from './User';
 // import Login from './Login';
-import GoalTracker from './GoalTracker';
+import GoalsTracker from './GoalsTracker';
 
 
 class App extends Component {
