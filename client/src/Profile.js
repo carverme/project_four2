@@ -36,7 +36,7 @@ function Profile(props) {
   );
 }
 
-Goals.propTypes = {
+Profile.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 

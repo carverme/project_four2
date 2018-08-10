@@ -5,7 +5,7 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import AppBar from '@material-ui/core/AppBar'
 import './App.css';
-import Calendar from './Calendar';
+import Project from './Project';
 import Goals from './Goals';
 import Profile from './Profile';
 import Home from './Home';
@@ -24,12 +24,12 @@ class App extends Component {
             <Navbar />
             <header className="App-header">
             {/* <Menubar /> */}
-              <h1 className="App-title">SeeGoal App</h1>
+              <h1 className="App-title">Code Tracker </h1>
             </header>
             <Route exact path="/" render={() => <Home /> } />
             <Route path="/goals" render={() => <Goals /> } />
-            {/* <Route path="/login" render={() => <Login /> } /> */}
-            <Route path="/calendar" render={() => <Calendar /> } />
+            <Route path="/profile" render={() => <Profile /> } />
+            <Route path="/Project" render={() => <Project /> } />
           </div>
         </Router>
       </div>
