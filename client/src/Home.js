@@ -7,38 +7,20 @@ class Home extends Component {
     return (
       <div className="Home">
 
-        <div class="row">
-          <div class="col s12 m4 offset-m4">
-            <div class="card">
-              <div class="card-action teal lighten-1 white-text">
-                <h3>Login form </h3>
+        <div class="login-container">
+          <section class="login" id="login">
+            <header>
+              <h2>Code Tracker</h2>
+              <h4>Login</h4>
+            </header>
+            <form class="login-form" action="#" method="post">
+              <input type="text" class="login-input" placeholder="User" required autofocus/>
+              <input type="password" class="login-input" placeholder="Password" required/>
+              <div class="submit-container">
+                <button type="submit" class="login-button">SIGN IN</button>
               </div>
-              <div class="card-content">
-                <div class="form-field">
-                  <label form="username">Username</label>
-                  <input type="text" id="username"></input>
-                </div>
-                <div class="form-field">
-                  <label form="password">Password</label>
-                  <input type="password" id="password"></input>
-                </div>
-                <div id="login-button" class="form-field">
-                  <button class="btn-large waves-effect waves-dark">Login</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="chart-box">
-          <Grid container >
-            <Grid item xs={12}>
-              <p className="grid" >GRID in Home</p>
-            </Grid>
-
-          </Grid>
-          <Grid container spacing={24} className="name">
-          </Grid>
+            </form>
+          </section>
         </div>
       </div>
     );

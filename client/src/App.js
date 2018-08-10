@@ -7,11 +7,12 @@ import AppBar from '@material-ui/core/AppBar'
 import './App.css';
 import Calendar from './Calendar';
 import Goals from './Goals';
+import Profile from './Profile';
 import Home from './Home';
 import Navbar from './Navbar';
 import User from './User';
 // import Login from './Login';
-import GoalTracker from './GoalTracker';
+import GoalsTracker from './GoalsTracker';
 
 
 class App extends Component {

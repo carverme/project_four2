@@ -8,16 +8,15 @@ import './App.css';
 const Navbar = props => {
   return (
     <div>
-      <ul>
-        <li><Link to='/'>Home</Link></li>
-        <li><Link to='/goals'>Goals</Link></li>
-        <li><Link to='/login'>Login</Link></li>
-        <li><Link to='/calendar'>Calendar</Link></li>
-      </ul>
       <AppBar position="static">
         <Toolbar>
           <Typography variant="title" color="inherit">
-            This is where my navagation bar is.
+
+              <Link to='/'>Home</Link>
+              <Link to='/goals'>Goals</Link>
+              <Link to='/login'>Login</Link>
+              <Link to='/calendar'>Calendar</Link>
+
           </Typography>
         </Toolbar>
       </AppBar>

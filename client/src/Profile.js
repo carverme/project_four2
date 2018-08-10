@@ -15,12 +15,12 @@ const styles = theme => ({
   },
 });
 
-function GoalsTracker(props) {
+function Profile(props) {
   const { classes } = props;
 
   return (
     <div className={classes.root}>
-      <h1>GoalsTracker</h1>
+      <h1>Profile</h1>
       <Grid container spacing={24} justify="space-around">
         <Grid item xs={12} sm={12}>
           <Paper id="box1" className={classes.paper}>ONE</Paper>
@@ -36,8 +36,8 @@ function GoalsTracker(props) {
   );
 }
 
-GoalsTracker.propTypes = {
+Goals.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(GoalsTracker);
+export default withStyles(styles)(Profile);
