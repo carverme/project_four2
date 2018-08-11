@@ -5,9 +5,9 @@ const bodyParser = require('body-parser');
 var db = require('../models');
 
 //testing with data
-let ghrepos = [{name: 'app1234'}, {name: 'portfolio'}, {name: 'project3'}, {name: 'blogposts'}]
+let ghrepos = [{name: 'app1234'}, {name: 'gameApp'}, {name: 'project3'}, {name: 'blogposts'}]
 
-let project = {name: 'portfolio'}
+let project = {name: 'portfolio', description: 'blog post here for all the things we like to do'}
 
 router.get('/', function(req, res) {
   res.render('repos/all', {repos: ghrepos});
