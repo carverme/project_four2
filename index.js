@@ -34,7 +34,9 @@ app.get('/', (req, res) => {
 
 
   //<-------------Router use-------------->
-  app.use('auth', require('./controllers/auth'));
+  app.use('/auth', require('./controllers/auth'));
+  app.use('/repos', require('./controllers/repos'));
+
 
 
   var server = app.listen(process.env.PORT || 3000);
