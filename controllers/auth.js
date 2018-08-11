@@ -24,17 +24,16 @@ router.get('/login',
     res.render('login')
   });
 
-router.get('/auth/github',
-  passport.authenticate('github'))
+router.get('/github', passport.authenticate('github'));
 
-router.get('/auth/github/callback',
+router.get('/github/callback',
   passport.authenticate('github', { failureRedirect: '/login' }),
   function(req, res) {
     console.log("################## in the successful login callback ##################")
     // Successful authentication, redirect home.
     console.log("Now lets see what is attached to the req object");
     console.log(req.user);
-    res.send('WHERE AM I?????????');
+    res.redirect('/repos');
   });
 
   router.get('/profile',
