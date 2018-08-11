@@ -26,14 +26,31 @@ app.use(passport.session());
 app.get('/', (req, res) => {
   res.render('index');
 });
+//
+// app.get('/showrepos', (req, res) => {
+//   res.render('showrepos');
+// })
+
+// app.get('/showrepo', (req, res) => {
+//   res.render('showrepo');
+// })
+
+// app.get('/profile', (req, res) => {
+//   res.render('profile');
+// })
 
 
-  //<-------------Router use-------------->
-  app.use('/auth', require('./controllers/auth'));
-  app.use('/repos', require('./controllers/repos'));
 
 
 
-  var server = app.listen(process.env.PORT || 3000);
 
-  module.exports = server;
+
+
+
+
+//<-------------Router use-------------->
+app.use('auth', require('./controllers/auth'));
+// app.use('time', require('./controllers/time'));
+
+var server = app.listen(process.env.PORT || 3000);
+module.exports = server;

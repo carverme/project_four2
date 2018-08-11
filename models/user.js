@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
     accesstoken: DataTypes.STRING
   }, {});
   user.associate = function(models) {
-    // associations can be defined here
+    models.user.hasMany(models.time);
   };
   return user;
 };
