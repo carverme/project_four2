@@ -48,8 +48,6 @@ app.get('/', (req, res) => {
 
 
 
-
-
 //<-------------Router use-------------->
 app.use('auth', require('./controllers/auth'));
 // app.use('time', require('./controllers/time'));
