@@ -10,24 +10,24 @@ var db = require('../models');
 //     res.render('home', { user.req.user });
 //   });
 
-// router.get('/', (req, res) => {
-//   console.log('This is the user' + req.user)
-//     res.render('/')
+router.get('/', (req, res) => {
+  console.log('This is the user' + req.user)
+    res.render('/')
 
     // res.json({
     //   githubid, accesstoken
     // });
-// });
+});
 
 router.get('/login',
   function(req, res) {
     res.render('login')
   });
 
-router.get('/auth/github',
+router.get('/github',
   passport.authenticate('github'))
 
-router.get('/auth/github/callback',
+router.get('/github/callback',
   passport.authenticate('github', { failureRedirect: '/login' }),
   function(req, res) {
     console.log("################## in the successful login callback ##################")
