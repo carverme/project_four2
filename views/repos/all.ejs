@@ -7,7 +7,9 @@
   <div class="col s12 m6 l6">
     <h5>My Repos</h5>
     <ul>
-      <li>Repo one...insert here + time that logged on this repo.</li>
+      <% repos.forEach(function(repo) { %>
+        <li><a href="/repos/<%= repo.name %>"><%= repo.name %></a></li>
+      <% }) %>
     </ul>
   </div>
 </div>
