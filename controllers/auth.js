@@ -10,19 +10,22 @@ var db = require('../models');
 //     res.render('home', { user.req.user });
 //   });
 
-// router.get('/', (req, res) => {
-//   console.log('This is the user' + req.user)
-//     res.render('/')
+router.get('/', (req, res) => {
+  console.log('This is the user' + req.user)
+    res.render('/')
 
     // res.json({
     //   githubid, accesstoken
     // });
-// });
+});
 
-router.get('/login',
-  function(req, res) {
-    res.render('login')
-  });
+// router.get('/login', function(req, res) {
+//     res.render('login')
+//   });
+
+router.get('/logout', function(req, res) {
+  res.send('NEED TO FINISH LOGOUT ROUTE')
+});
 
 router.get('/github', passport.authenticate('github'));
 
@@ -33,6 +36,7 @@ router.get('/github/callback',
     // Successful authentication, redirect home.
     console.log("Now lets see what is attached to the req object");
     console.log(req.user);
+    // res.send('yooooooo');
     res.redirect('/repos');
   });
 

@@ -14,6 +14,10 @@ module.exports = {
       accesstoken: {
         type: Sequelize.STRING
       },
+      //ADDED - we needed to have a username column in our db
+      username: {
+        type: Sequelize.STRING
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
