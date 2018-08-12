@@ -19,13 +19,15 @@ router.get('/', (req, res) => {
     // });
 });
 
-router.get('/login',
-  function(req, res) {
-    res.render('login')
-  });
+// router.get('/login', function(req, res) {
+//     res.render('login')
+//   });
 
-router.get('/github',
-  passport.authenticate('github'))
+router.get('/logout', function(req, res) {
+  res.send('NEED TO FINISH LOGOUT ROUTE')
+});
+
+router.get('/github', passport.authenticate('github'));
 
 router.get('/github/callback',
   passport.authenticate('github', { failureRedirect: '/login' }),
@@ -34,7 +36,8 @@ router.get('/github/callback',
     // Successful authentication, redirect home.
     console.log("Now lets see what is attached to the req object");
     console.log(req.user);
-    res.send('WHERE AM I?????????');
+    // res.send('yooooooo');
+    res.redirect('/repos');
   });
 
   router.get('/profile',

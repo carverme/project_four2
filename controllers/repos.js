@@ -1,21 +1,32 @@
 require('dotenv').config();
 const express = require('express');
 const router = express.Router();
+//added
+const axios = require('axios');
 const bodyParser = require('body-parser');
 var db = require('../models');
 
-//testing with data
-let ghrepos = [{name: 'app1234'}, {name: 'portfolio'}, {name: 'project3'}, {name: 'blogposts'}]
-
-let project = {name: 'portfolio'}
+let project = {name: 'portfolio', description: 'blog post here for all the things we like to do'}
 
 router.get('/', function(req, res) {
-  res.render('repos/all', {repos: ghrepos});
+  //ADDED##########################
+  console.log('%%%%%%%%%%%%%%%  heres req.user: ', req.user);
+  db.user.find({
+    //using parseInt b/c req.user.github is being passed to the front as a string in the passportConfig ##########
+    //should be using parseInt in the passportConfig, b/c if we are using it as a number we should pass it around as a number #############
+    where: {githubid: parseInt(req.user.githubid)}
+  }).then(function(dbUser) {
+    console.log('############ here is dbUser: ', dbUser);
+    axios.get(`https://api.github.com/users/${dbUser.username}/repos`).then(function(response) {
+      // console.log('here is response.data: ', response.data);
+      res.render('repos/all', {repos: response.data});
+    });
+  });
 });
 
 //testing with one project (data)
 router.get('/:name', function(req, res) {
-  res.render('repos/show', {repo: project})
+  res.render('repos/show', {repo: req.params.name})
 });
 
 module.exports = router;

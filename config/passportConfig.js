@@ -8,14 +8,17 @@ passport.use(new GitHubStrategy({
     clientSecret: process.env.GITHUB_CLIENT_SECRET,
     callbackURL: "http://localhost:3000/auth/github/callback"
   }, (accessToken, refreshToken, profile, cb) => {
-    console.log('this is the access token:', accessToken);
-    console.log('refresh token', refreshToken);
-    console.log('see this profile:', profile);
+    // console.log('this is the access token:', accessToken);
+    // console.log('refresh token', refreshToken);
+    // console.log('see this profile:', profile);
     db.user.findOrCreate({
+      //We do not need (line below) the github id - b/c we cannot do anything with id in this API - they enforce user name that are unique
       where: {githubid: profile.id },
-      defaults: {accesstoken: accessToken}
+      //ADDED username: profile.username###############bringing in this column and saving username
+      defaults: {accesstoken: accessToken, username: profile.username}
     }).spread(function(user, created) {
-      console.log(user, created);
+      // console.log(user, created);
+      //MIGHT NEED REVIEW B/C NO USERNAME HERE and profile.id IS STRING but we are parsing it in another file so it's working now
       return cb(null, {githubid: profile.id, accesstoken: accessToken})
     })
   }
