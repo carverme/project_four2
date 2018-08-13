@@ -1,16 +1,23 @@
 img {
   /* opacity: .5; */
   /* filter: alpha(opacity(=50); */
+  margin-top: 1.5em;
+  box-shadow: 0 0 1em .1em rgba(120, 150, 143, .5);
 }
 
 nav {
-  background: #3f9648;
+  /* background: #799790; */
+  background: linear-gradient(to bottom right, #98beb5, #4c655f);
+  padding: 0 1em;
 }
 
 body {
-  background-color: #DADCE2;
+  /* background-color: #DADCE2; */
+  background-color: #1A262F;
   background-repeat: no-repeat;
   background-size: cover;
+  color: #F4A25C;
+  font-family: 'PT Sans', sans-serif;
 }
 
 .repo-name {
@@ -18,14 +25,14 @@ body {
   padding-left: 1em;
   padding-right: 1em;
   font-size: 30px;
-  color: #30a76d;
+  color: white;
 }
 
 #card-panel-box {
-    min-height: 10px;
-    padding: 10px;
-    border-radius: 4px;
-
+  min-height: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #348573 !important;
 }
 
 #card-panel-box h2 {
