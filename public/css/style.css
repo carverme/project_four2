@@ -75,7 +75,7 @@ body {
 /* #################TESTING################ */
 
 
-.container-one {
+.box {
     position: relative;
     text-align: left;
     color: white;
@@ -88,4 +88,14 @@ body {
     transform: translate(-50%, -50%);
     color: #F4A25C;
     font-size: 20px;
+}
+
+
+@media (min-width: 200px) {
+    .centered-text {
+        font-size:1.5em;
+        overflow: visible;
+        white-space: normal;
+        text-overflow: none;
+    }
 }
