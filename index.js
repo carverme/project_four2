@@ -20,21 +20,18 @@ app.use(session({ secret: 'oauths are stupid', resave: true, saveUninitialized: 
 app.use(passport.initialize());
 app.use(passport.session());
 
+//route for GET('/')
 app.get('/', (req, res) => {
-  res.render('index');
+ if (req.query.toast) {
+    res.render('index', {toast: req.query.toast});
+  } else {
+    res.render('index', {toast: false});
+  }
 });
 
 // app.get('/profile', (req, res) => {
 //   res.render('profile');
 // })
-
-
-
-
-
-
-
-
 
 
 //<-------------Router use-------------->
