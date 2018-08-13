@@ -43,3 +43,8 @@ body {
 #card-panel-box h2 {
   margin: 0;
 }
+
+.btn {
+  background-color: #e3f279;
+  color: black ;
+}
