@@ -62,3 +62,7 @@ body {
     color: white;
     background-color: #348573;
 }
+
+.time-logs {
+  font-size: 40px;
+}
