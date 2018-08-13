@@ -1,26 +1,20 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('times', {
+    return queryInterface.createTable('timelogs', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      minute: {
+      repoId: {
         type: Sequelize.INTEGER
       },
-      totalmins: {
+      min: {
         type: Sequelize.INTEGER
       },
-      userId: {
-        type: Sequelize.INTEGER
-      },
-      repoid: {
-        type: Sequelize.INTEGER
-      },
-      reponame: {
+      date: {
         type: Sequelize.STRING
       },
       createdAt: {
@@ -34,6 +28,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('times');
+    return queryInterface.dropTable('timelogs');
   }
 };

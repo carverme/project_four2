@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
     username: DataTypes.STRING
   }, {});
   user.associate = function(models) {
-    models.user.hasMany(models.time);
+    models.user.hasMany(models.gitrepo);
   };
   return user;
 };

@@ -10,7 +10,7 @@
       <div class="repo-list-item row">
         <div id="card-panel-box" class="col s12 card-panel grey lighten-1">
           <h2>
-            <a class="repo-name" href="/repos/<%= repo.name %>"><%= repo.name %></a>
+            <a class="repo-name repo-post" data-id="<%- repo.id %>" data-name="<%- repo.name %>" href="/repos/<%= repo.id %>"><%= repo.name %></a>
           </h2>
         </div>
       </div>
