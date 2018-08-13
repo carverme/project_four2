@@ -20,4 +20,22 @@ $( document ).ready(function() {
     }
   }
 
+  $('a.repo-post').on('click', function(e) {
+    e.preventDefault();
+    var gitid = $(this).attr('data-id');
+    var url = '/repos/' + gitid;
+    var reponame = $(this).attr('data-name');
+    console.log("in the js hijack!")
+    $.ajax({
+      method: "POST",
+      url: url,
+      data: {gitid:gitid, reponame:reponame}
+    }).done(function(data) {
+    console.log(data);
+    console.log('#############this is the url', url);
+    window.location = url;
+    })
+  });
+
+
 });

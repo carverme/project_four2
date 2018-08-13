@@ -17,7 +17,7 @@ router.get('/', function(req, res) {
     }).then(function(dbUser) {
       console.log('############ here is dbUser: ', dbUser);
       axios.get(`https://api.github.com/users/${dbUser.username}/repos`).then(function(response) {
-        // console.log('here is response.data: ', response.data);
+        console.log('here is response.data: ', response.data);
         res.render('repos/all', {repos: response.data});
       });
     });
@@ -28,8 +28,30 @@ router.get('/', function(req, res) {
 });
 
 //testing with one project (data)
-router.get('/:name', function(req, res) {
-  res.render('repos/show', {repo: req.params.name})
+router.get('/:id', function(req, res) {
+  db.gitrepo.findOne({
+    where: {gitid: req.params.id}
+  }).then( function(repo){
+
+    console.log('😡   ', repo)
+    res.render('repos/show', {repo: repo})
+  })
+});
+
+router.post('/:id', function(req, res) {
+  console.log('#################', req.body);
+    db.gitrepo.findOrCreate({
+      where: {
+        gitid: req.body.gitid,
+        reponame: req.body.reponame
+      },
+    }).spread((gitrepo, created) => {
+      console.log(gitrepo.get({
+        plain: true
+      }))
+      console.log(created);
+      res.sendStatus(200);
+    });
 });
 
 module.exports = router;
