@@ -1,7 +1,7 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   var timelog = sequelize.define('timelog', {
-    repoId: DataTypes.INTEGER,
+    gitrepoId: DataTypes.INTEGER,
     min: DataTypes.INTEGER,
     date: DataTypes.STRING
   }, {});

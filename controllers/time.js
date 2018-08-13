@@ -6,39 +6,24 @@ const passport = require('../config/passportConfig.js');
 var db = require('../models');
 const fs = require('fs');
 
-// //GET /time
-// router.get('/', (req, res) => {
-//
-// })
-
-//POST /time
-router.post('/:id', (req, res) => {
-  db.timelog.create({
+// POST route recording the modal data to the db.
+router.post('/:id', function(req, res) {
+  console.log("HITTING POST /TIME/...");
+  db.gitrepo.findOne({
     where: {id: req.params.id}
-  }).then(function(time) {
-    time.createMinsLog({
-      minute: req.body.minute
-    }).then(function(data) {
-      console.log("HITTING /TIME //POST");
-      res.redirect('/show/' + user.id);
+  }).then(function(repo){
+    db.timelog.create({
+      min: req.body.min,
+      date: req.body.date,
+      gitrepoId: req.params.id
+    }).then(function(time) {
+      console.log("HITTING TIME...");
+      res.redirect('/repos/' + repo.gitid);
     }).catch(function(err) {
-      console.log(err);
+       console.log(err);
     });
-  });
+  })
 });
-
-
-
-//
-// //GET /time/new
-// router.get('/new', (req, res) => {
-//   res.render('time/new')
-// })
-
-
-
-
-
 
 
 module.exports = router;

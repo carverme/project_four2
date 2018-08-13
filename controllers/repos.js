@@ -32,13 +32,21 @@ router.get('/:id', function(req, res) {
   db.gitrepo.findOne({
     where: {gitid: req.params.id}
   }).then( function(repo){
+    console.log('~~~~~~~~~~~~~~~~~~~HERE DINGUS',repo)
+    db.timelog.findAll({
+      where: {
+        gitrepoId: repo.id}
+      }).then(function(timelog){
+        console.log('~~~~~~~~~~~~~~~~~~~HERE DINGUS',timelog)
+        res.render('repos/show', {repo: repo, timelogs: timelog})
+      })
+    // console.log('😡   ', repo)
 
-    console.log('😡   ', repo)
-    res.render('repos/show', {repo: repo})
   })
 });
 
 router.post('/:id', function(req, res) {
+  console.log('CHECK IT')
   console.log('#################', req.body);
     db.gitrepo.findOrCreate({
       where: {

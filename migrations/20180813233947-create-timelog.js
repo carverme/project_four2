@@ -8,7 +8,7 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      repoId: {
+      gitrepoId: {
         type: Sequelize.INTEGER
       },
       min: {
