@@ -8,9 +8,6 @@ passport.use(new GitHubStrategy({
     clientSecret: process.env.GITHUB_CLIENT_SECRET,
     callbackURL: "http://localhost:3000/auth/github/callback"
   }, (accessToken, refreshToken, profile, cb) => {
-    // console.log('this is the access token:', accessToken);
-    // console.log('refresh token', refreshToken);
-    // console.log('see this profile:', profile);
     db.user.findOrCreate({
       //We do not need (line below) the github id - b/c we cannot do anything with id in this API - they enforce user name that are unique
       where: {githubid: profile.id },

@@ -48,3 +48,44 @@ body {
   background-color: #e3f279;
   color: black ;
 }
+
+.waves-effect {
+  margin-left: 0.5em;
+}
+
+.btn:hover {
+  color: #7E9790;
+  color: white:
+}
+
+#repo-btn:hover, #log-time-btn:hover {
+    color: white;
+    background-color: #348573;
+}
+
+.time-logs {
+  font-size: 40px;
+}
+
+.logo {
+  font-size: 35px;
+}
+
+
+/* #################TESTING################ */
+
+
+.container-one {
+    position: relative;
+    text-align: left;
+    color: white;
+}
+
+.centered-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #F4A25C;
+    font-size: 20px;
+}
