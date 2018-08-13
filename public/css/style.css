@@ -52,3 +52,13 @@ body {
 .waves-effect {
   margin-left: 0.5em;
 }
+
+.btn:hover {
+  color: #7E9790;
+  color: white:
+}
+
+#repo-btn:hover, #log-time-btn:hover {
+    color: white;
+    background-color: #348573;
+}
