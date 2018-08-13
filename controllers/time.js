@@ -11,25 +11,25 @@ const fs = require('fs');
 //
 // })
 
-// //POST /time
-// router.post('/:id', (req, res) => {
-//   db..findOne({
-//     where: {id: req.params.id}
-//   }).then(function(time) {
-//     time.createMinsLog({
-//       minute: req.body.minute
-//     }).then(function(data) {
-//       console.log("HITTING /TIME //POST");
-//       res.redirect('/show/' + user.id);
-//     }).catch(function(err) {
-//       console.log(err);
-//     });
-//   });
-// });
+//POST /time
+router.post('/:id', (req, res) => {
+  db.timelog.create({
+    where: {id: req.params.id}
+  }).then(function(time) {
+    time.createMinsLog({
+      minute: req.body.minute
+    }).then(function(data) {
+      console.log("HITTING /TIME //POST");
+      res.redirect('/show/' + user.id);
+    }).catch(function(err) {
+      console.log(err);
+    });
+  });
+});
 
 
 
-// 
+//
 // //GET /time/new
 // router.get('/new', (req, res) => {
 //   res.render('time/new')
