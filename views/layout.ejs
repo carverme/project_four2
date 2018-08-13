@@ -4,12 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>RepoTracker</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Yesteryear" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
   </head>
-  <body class="grey lighten-2">
+  <!-- <body class="grey lighten-2"> -->
+    <body>
     <!-- Nav wrapper dropdown content -->
     <ul id="dropdown1" class="dropdown-content">
       <li><a class="black-text" href="/repos">Repos</a></li>
@@ -18,11 +20,12 @@
     </ul>
     <!-- Navbar -->
     <nav>
-      <div class="nav-wrapper black">
+      <div class="nav-wrapper">
         <a href="/" class="brand-logo"><div class="logo">RepoTracker</div></a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <ul id="nav-mobile" class="right">
           <li><a class="dropdown-trigger" href="#!" data-target="dropdown1"><i class="medium material-icons right">menu</i></a></li>
         </ul>
+        <!-- NEED TO FIX LOGIN WHEN MOBILE MODE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="/auth/github">Login</a></li>
         </ul>
