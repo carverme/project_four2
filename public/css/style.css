@@ -26,6 +26,11 @@ body {
   padding-right: 1em;
   font-size: 30px;
   color: white;
+  transition: color .3s;
+}
+
+.repo-name:hover {
+  color: #e3f279;
 }
 
 #card-panel-box {

@@ -24,7 +24,17 @@ router.get('/', (req, res) => {
 //   });
 
 router.get('/logout', function(req, res) {
-  res.send('NEED TO FINISH LOGOUT ROUTE')
+  req.logout();
+  passport.user = null;  // Without this I never get logged out, even though session is deleted.
+  if (req.session) {
+    req.session.destroy(function (err) {
+      if (err) {
+        console.log(err)
+      } else {
+        res.redirect('/');
+      }
+    });
+  }
 });
 
 router.get('/github', passport.authenticate('github'));
