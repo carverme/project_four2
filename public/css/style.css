@@ -1,9 +1,33 @@
 img {
-  opacity: .5;
-  filter: alpha(opacity(=50);
+  /* opacity: .5; */
+  /* filter: alpha(opacity(=50); */
+}
+
+nav {
+  background: #3f9648;
+}
+
+body {
+  background-color: #DADCE2;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .repo-name {
-  text-transform: capitalize;
-  color: white !important; 
+  font-size: 40px;
+  padding-left: 1em;
+  padding-right: 1em;
+  font-size: 30px;
+  color: #30a76d;
+}
+
+#card-panel-box {
+    min-height: 10px;
+    padding: 10px;
+    border-radius: 4px;
+
+}
+
+#card-panel-box h2 {
+  margin: 0;
 }
