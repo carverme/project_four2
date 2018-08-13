@@ -1,15 +1,18 @@
 <div class="row">
   <div class="col s12 l6">
-    <h1>NAME's Repos</h1>
+  <h1>Your Repo List</h1>
   </div>
 </div>
 <div class="row">
-  <div class="col s12 m6 l6">
-    <h5>My Repos</h5>
-    <ul>
+  <div class="col s8">
       <% repos.forEach(function(repo) { %>
-        <li><a href="/repos/<%= repo.name %>"><%= repo.name %></a></li>
+      <div class="repo-list-item row">
+        <div class="col s12 card-panel teal lighten-4">
+          <h2>
+            <a class="repo-name" href="/repos/<%= repo.name %>"><%= repo.name %></a>
+          </h2>
+        </div>
+      </div>
       <% }) %>
-    </ul>
   </div>
 </div>

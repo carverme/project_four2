@@ -1,5 +1,3 @@
-
-
 console.log("jscripting...")
 
 $( document ).ready(function() {
