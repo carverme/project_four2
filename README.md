@@ -20,8 +20,8 @@ Log your GitHub repos and save the total time on the RepoTracker App.
 ![New Calendar Event](../img/RepoTracker1.png)
 
 ### Developers:
-###### Matt Carver - Frontend & Backend Web Developer
-###### Eva Barrett - Frontend & Backend Web Developer
+#### Matt Carver - Frontend & Backend Web Developer
+#### Eva Barrett - Frontend & Backend Web Developer
 
 How to use the app:
 1. Click Login in drop down bar at the top right on the home page.
@@ -47,9 +47,8 @@ User Stories:
 - JS
 - Materialize
 
-## Project Timeline
+## Planning Process
 
-##### Planning Process
 - brainstormed ideas
 - researched API's
 - discussed ideas
@@ -89,6 +88,6 @@ User Stories:
 
 
 ## Future Goals
--Tracking daily, weekly, monthly logged time
--View total time spend on all repositories
--Description of each repos (user inputs details)
+- Tracking daily, weekly, monthly logged time
+- View total time spend on all repositories
+- Description of each repos (user inputs details)
