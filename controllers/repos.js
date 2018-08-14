@@ -15,9 +15,7 @@ router.get('/', function(req, res) {
       //should be using parseInt in the passportConfig, b/c if we are using it as a number we should pass it around as a number #############
       where: {githubid: parseInt(req.user.githubid)}
     }).then(function(dbUser) {
-      console.log('############ here is dbUser: ', dbUser);
       axios.get(`https://api.github.com/users/${dbUser.username}/repos`).then(function(response) {
-        console.log('here is response.data: ', response.data);
         res.render('repos/all', {repos: response.data});
       });
     });
@@ -36,9 +34,14 @@ router.get('/:id', function(req, res) {
     db.timelog.findAll({
       where: {
         gitrepoId: repo.id}
-      }).then(function(timelog){
-        console.log('~~~~~~~~~~~~~~~~~~~HERE DINGUS',timelog)
-        res.render('repos/show', {repo: repo, timelogs: timelog})
+      }).then(function(repolog){
+        console.log('~~~~~~~~~~~~~~~~~~~HERE DINGUS', repolog)
+        let totalTime = 0;
+        repolog.forEach(repo => {
+          totalTime += repo.min;
+        });
+        console.log('$^$^$^$^$^$^$^$^$^$^$ TOTALTIME: ', totalTime)
+        res.render('repos/show', {repo: repo, timelogs: repolog, totalTime})
       })
     // console.log('😡   ', repo)
 

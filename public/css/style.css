@@ -49,29 +49,12 @@ body {
 
 .time-logs {
   font-size: 40px;
+  margin-top: 0;
 }
 
 .logo {
   font-size: 35px;
 }
-#repo-btn:hover, #log-time-btn:hover {
-    color: white;
-    background-color: #348573;
-}
-
-#card-panel-box {
-  min-height: 10px;
-  padding: 10px;
-  border-radius: 4px;
-  background-color: #348573 !important;
-}
-
-#card-panel-box h2 {
-  margin: 0;
-}
-
-/* #################TESTING################ */
-
 
 .box {
     position: relative;
@@ -86,6 +69,26 @@ body {
     transform: translate(-50%, -50%);
     color: #F4A25C;
     font-size: 20px;
+}
+
+.total-time {
+  font-size: 20px;
+}
+
+#repo-btn:hover, #log-time-btn:hover {
+    color: white;
+    background-color: #348573;
+}
+
+#card-panel-box {
+  min-height: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #348573 !important;
+}
+
+#card-panel-box h2 {
+  margin: 0;
 }
 
 
