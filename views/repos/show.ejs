@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col s12 l12">
-    <h1><%= repo.repname %></h1>
+    <h1><%= repo.reponame %></h1>
     <a id="repo-btn" class="waves-effect waves-light btn right" href="/repos">Return to Repo List</a>
     <button id="log-time-btn" data-target="modal1" class="btn modal-trigger right">Log Time</button>
   </div>
@@ -9,16 +9,22 @@
   <div class="col s12 m12 l12">
     <h1 class="time-logs">Time logs:</h1>
     <hr>
-    <p>Here we will list, with a for loop..., the time logs, through a modal, with a list, using the minutes entered, the createAt time, and by linking the repoid to the specific log for the repo.. </p>
+    <% timelogs.forEach(function(timelog) { %>
+    <h5>You've logged: <%= timelog.min %> of minutes on this date: <%= timelog.date %></h5>
+
+    <% }); %>
   </div>
 </div>
 
 <div id="modal1" class="modal">
     <div class="modal-content">
       <h3>Log your time:</h3>
-      <form action="" method="post">
+      <form action="/time/<%= repo.id %>" method="post">
           <label>How many minutes have you logged on this Repo?
-            <input type="text" name="minutes">
+            <input type="text" name="min">
+          </label>
+          <label>What's today's date?
+            <input type="text" name="date">
           </label>
           <input type="submit" value="Log Time">
       </form>
