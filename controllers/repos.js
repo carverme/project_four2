@@ -41,16 +41,15 @@ router.get('/:id', function(req, res) {
 
 //POST /repos/:id
 router.post('/:id', function(req, res) {
-    db.gitrepo.findOrCreate({
-      where: {
-        gitid: req.body.gitid,
-        reponame: req.body.reponame
-      },
-    }).spread((gitrepo, created) => {
-        plain: true
-      }))
-      res.sendStatus(200);
-    });
+  db.gitrepo.findOrCreate({
+    where: {
+      gitid: req.body.gitid,
+      reponame: req.body.reponame
+    },
+  }).spread((gitrepo, created) => {
+      plain: true
+    })
+  res.sendStatus(200);
 });
 
 module.exports = router;
