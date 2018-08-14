@@ -19,7 +19,7 @@
 Log your GitHub repos and save the total time on the RepoTracker App.
 
 ## Wire Frames
-#### created in Adobe XD
+#### Created in Adobe XD
 ![Home Page](./public/img/wireframes.png)
 
 #
