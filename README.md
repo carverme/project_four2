@@ -1,33 +1,17 @@
-# My  Calendar App -- Let google calendar organize your life
-
-#### WDI Seattle Project 4
-
-![TITLE](image.jpg)
-
-## About App
-
-RepoTracker Calendar App allows you to add goals to your calendar where you can track your progress. WORK IN PROGRESS FILLER TEXT
+![TITLE](./public/img/RepoTracker.png)
 
 [Live Site](heroku link)
 
-## Wire Frames
-#### created in Adobe XD
-![Home Page](../img/RepoTracker1.png)
-#
-![Login/Signup](../img/RepoTracker2.png)
-
-![Profile Page](../img/RepoTracker3.png)
-
-![New Calendar Event](../img/RepoTracker1.png)
-
-ADDDING TEST
-
+#### WDI Seattle Project 4
 ### Developers:
-###### Matt Carver - Backend Web Developer
-###### Eva Barrett - Frontend Web Developer
+#### Matt Carver - Frontend & Backend Web Developer
+#### Eva Barrett - Frontend & Backend Web Developer
+
+## About App
+Log your GitHub repos and save the total time on the RepoTracker App.
 
 How to use the app:
-1. Click on Login in drop down bar at the top right on the home page.
+1. Click Login in drop down bar at the top right on the home page.
 2. Authorize your log in credentials with GitHub.
 3. Your list of repos will be generated.
 4. Click on a single repo then click 'log time' for the modal to appear.
@@ -35,50 +19,73 @@ How to use the app:
 6. Click submit and below will be your updated logged time for each repo.
 7. Click Logout to end your session.
 
+![Home Page](./public/img/RepoTracker1.png)
+#
+![Login/Signup](./public/img/RepoTracker2.png)
+#
+![Profile Page](./public/img/RepoTracker3.png)
+#
+![New Calendar Event](./public/img/RepoTracker1.png)
+#
+
+Planning Process:
+
+## Wire Frames
+#### Created in Adobe XD
+![Home Page](./public/img/wireframes.png)
 
 User Stories:
-- Megan is improving here Web Development skills and wants to log the amount of time she spends on her projects. RepoTracker will be a great application for her since she will be able to see her progress on each repository.
+- Megan is improving her Web Development skills and wants to log the amount of time she spends on her projects. She uses RepoTracker to see her total time spent on each repository.
 
-- Rob is applying for Web Development jobs and wants to track the time spend on each project. Although Github is great to see the daily commits, with RepoTracker you can focus how much time you ahve spent on any individual projects.
+- Rob is applying for Web Development jobs and wants to track the time spend on each repository. He uses GitHub which is a great way to track his daily commits and with RepoTracker he can show his potential employers how much time he spent on each individual repos.
 
+## Planning Process
 
-##### Key Technologies Used:
-- React
-- MongoDB
-- Material UI
-- ADD MORE HEREEEEEE
-- ADD MORE HEREEEEEE
-
-## Project Timeline
-
-##### Planning
+- brainstormed ideas
 - researched API's
-- discussed ideas and Planning
--
-
-##### Development Process
+- discussed ideas
+- Trello board planning
+- wrote pseudo code to plan out difficult parts of the app
+- drew wire frames with AdobeXd for layouts
+- listed routes needed for app
+- listed needed models
+- drew out db models to visualize how they connect
 
 
 ##### Testing/Debugging:
-
+- GitHub API you can only get users by their username not their GitHub id.
 
 ## Routes
 
 ## auth routes
 | Method | Path						|
-| -------| ------------------------ |
-| POST 	 | /auth/login				|
-| GET 	 | /auth/logout				|
+| -------| ---------------|
+| GET 	 | /auth				  |
+| GET    | /auth/logout   |
+| GET 	 | /auth/github		|
 
 
-## playlist routes
+## repos routes
 | Method | Path						|
-| -------| ------------------------	|
-| POST 	 | /name				|
-| PUT 	 | /name/:id			|
-| DELETE | /name/:id			|
+| -------| ---------------|
+| GET 	 | /repos/				|
+| GET 	 | /repos/:id			|
+| POST   | /repos/:id			|
 
+## time routes
+| Method | Path						|
+| -------| ---------------|
+| POST 	 | /time/:id			|
+
+##### Key Technologies Used:
+- Node
+- Express
+- EJS
+- Postgres
+- JS
+- Materialize
 
 ## Future Goals
-
-###### Acknowledgements:
+- Tracking daily, weekly, monthly logged time
+- View total time spend on all repositories
+- Description of each repos (user inputs details)
