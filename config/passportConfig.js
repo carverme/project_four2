@@ -6,7 +6,7 @@ var db = require("../models");
 passport.use(new GitHubStrategy({
     clientID: process.env.GITHUB_CLIENT_ID,
     clientSecret: process.env.GITHUB_CLIENT_SECRET,
-    callbackURL: "http://localhost:3000/auth/github/callback"
+    callbackURL: "https://gitman.herokuapp.com/auth/github/callback"
   }, (accessToken, refreshToken, profile, cb) => {
     db.user.findOrCreate({
       //We do not need (line below) the github id - b/c we cannot do anything with id in this API - they enforce user name that are unique
