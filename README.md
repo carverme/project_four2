@@ -4,7 +4,7 @@
 
 #### WDI Seattle Project 4
 
-![TITLE](image.jpg)
+![TITLE](./public/img/RepoTracker.png)
 
 ## About App
 Log your GitHub repos and save the total time on the RepoTracker App.
