@@ -33,17 +33,6 @@ body {
   color: #e3f279;
 }
 
-#card-panel-box {
-  min-height: 10px;
-  padding: 10px;
-  border-radius: 4px;
-  background-color: #348573 !important;
-}
-
-#card-panel-box h2 {
-  margin: 0;
-}
-
 .btn {
   background-color: #e3f279;
   color: black ;
@@ -58,11 +47,6 @@ body {
   color: white:
 }
 
-#repo-btn:hover, #log-time-btn:hover {
-    color: white;
-    background-color: #348573;
-}
-
 .time-logs {
   font-size: 40px;
 }
@@ -70,12 +54,26 @@ body {
 .logo {
   font-size: 35px;
 }
+#repo-btn:hover, #log-time-btn:hover {
+    color: white;
+    background-color: #348573;
+}
 
+#card-panel-box {
+  min-height: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #348573 !important;
+}
+
+#card-panel-box h2 {
+  margin: 0;
+}
 
 /* #################TESTING################ */
 
 
-.container-one {
+.box {
     position: relative;
     text-align: left;
     color: white;
@@ -88,4 +86,14 @@ body {
     transform: translate(-50%, -50%);
     color: #F4A25C;
     font-size: 20px;
+}
+
+
+@media (min-width: 600px) {
+    .centered-text {
+        font-size:20px;
+        overflow: visible;
+        white-space: normal;
+        text-overflow: none;
+    }
 }
