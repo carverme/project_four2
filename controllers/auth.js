@@ -5,27 +5,16 @@ const bodyParser = require('body-parser');
 const passport = require('../config/passportConfig.js');
 var db = require('../models');
 
-// app.get('/',
-//   function(req, res) {
-//     res.render('home', { user.req.user });
-//   });
-
+//GET /auth
 router.get('/', (req, res) => {
   console.log('This is the user' + req.user)
     res.render('/')
-
-    // res.json({
-    //   githubid, accesstoken
-    // });
 });
 
-// router.get('/login', function(req, res) {
-//     res.render('login')
-//   });
-
+//GET /auth/logout
 router.get('/logout', function(req, res) {
   req.logout();
-  passport.user = null;  // Without this I never get logged out, even though session is deleted.
+  passport.user = null;
   if (req.session) {
     req.session.destroy(function (err) {
       if (err) {
@@ -37,16 +26,12 @@ router.get('/logout', function(req, res) {
   }
 });
 
+//GET /auth/github
 router.get('/github', passport.authenticate('github'));
 
 router.get('/github/callback',
   passport.authenticate('github', { failureRedirect: '/login' }),
   function(req, res) {
-    console.log("################## in the successful login callback ##################")
-    // Successful authentication, redirect home.
-    console.log("Now lets see what is attached to the req object");
-    console.log(req.user);
-    // res.send('yooooooo');
     res.redirect('/repos');
   });
 

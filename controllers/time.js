@@ -6,9 +6,8 @@ const passport = require('../config/passportConfig.js');
 var db = require('../models');
 const fs = require('fs');
 
-// POST route recording the modal data to the db.
+// POST /time/:id
 router.post('/:id', function(req, res) {
-  console.log("HITTING POST /TIME/...");
   db.gitrepo.findOne({
     where: {id: req.params.id}
   }).then(function(repo){
