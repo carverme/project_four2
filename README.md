@@ -1,4 +1,4 @@
-# RepoTracker App
+![TITLE](./public/img/RepoTracker.png)
 
 [Live Site](heroku link)
 
@@ -18,8 +18,6 @@ How to use the app:
 5. Within the modal, log your time for that specific repo.
 6. Click submit and below will be your updated logged time for each repo.
 7. Click Logout to end your session.
-
-![TITLE](./public/img/RepoTracker.png)
 
 ![Home Page](./public/img/RepoTracker1.png)
 #
