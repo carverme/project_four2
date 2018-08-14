@@ -6,19 +6,23 @@
 
 ![TITLE](./public/img/RepoTracker.png)
 
+![Home Page](./public/img/RepoTracker1.png)
+#
+![Login/Signup](./public/img/RepoTracker2.png)
+#
+![Profile Page](./public/img/RepoTracker3.png)
+#
+![New Calendar Event](./public/img/RepoTracker1.png)
+#
+
 ## About App
 Log your GitHub repos and save the total time on the RepoTracker App.
 
 ## Wire Frames
 #### created in Adobe XD
-![Home Page](./public/img/RepoTracker1.png)
+![Home Page](./public/img/wireframes.png)
+
 #
-![Login/Signup](./public/img/RepoTracker2.png)
-
-![Profile Page](./public/img/RepoTracker3.png)
-
-![New Calendar Event](./public/img/RepoTracker1.png)
-
 ### Developers:
 #### Matt Carver - Frontend & Backend Web Developer
 #### Eva Barrett - Frontend & Backend Web Developer
